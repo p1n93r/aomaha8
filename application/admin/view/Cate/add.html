@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<meta name="author" content="Aomaha">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>后台管理系统(添加栏目)</title>
+</head>
+<body>
+<!--主体设计开始-->	
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4" style="margin-top:150px">
+			<form role="form" action="{:url('Cate/add')}" method="post" name="add_cate">
+				<div class="form-group">
+					<label for="name">栏目名称</label>
+					<input type="text" class="form-control" name="name" 
+						   placeholder="请输入栏目名称">
+					<p class="help-block">最多10个字哦</p>
+				</div>
+				<div class="form-group">
+					<label for="parent_id">所属分类</label>
+					<select class="form-control" name="parent_id">
+				      <option value="-1">WEB开发</option>
+				      <option value="-2">WEB渗透</option>
+				      <option value="-3">其他技术</option>
+				      {volist name="res" id="vo"}
+				      	{if condition="$vo['pid'] lt 0"}
+				      		{eq name="$vo['show']" value='1'}
+						      	<option value="{$vo.cid}">
+						      		{switch name="$vo['pid']" }
+									{case value="-1"}WEB开发：{$vo.cname}{/case}
+									{case value="-2"}WEB渗透：{$vo.cname}{/case}
+									{case value="-3"}其他技术：{$vo.cname}{/case}
+									{/switch}				      		
+						      	</option>
+						    {/eq}
+					    {/if}
+				      {/volist}
+				    </select>
+					<p class="help-block">带"："的为小类，即顶部分类里的类</p>
+				</div>
+				<div class="form-group">
+					<label for="sort">栏目序号</label>
+					<input type="text" class="form-control" name="sort">
+					<p class="help-block">侧边栏的分类将按照序号排列(0~99)</p>
+				</div>
+				<button type="submit" class="btn btn-primary">提交</button>
+			</form>
+		</div>
+	</div>
+</div>
+<!--主体设计开始-->
+</body>
+</html>

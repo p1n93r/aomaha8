@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<meta name="keywords" content="Aomaha|个人博客|技术博客|WEB渗透测试">
+<meta name="description" content="这是记录一些学习过程的个人博客">
+<meta name="author" content="Aomaha">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--引入bootstrap和jquery(= =')-->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--引入bootstrap和jquery结束-->　
+<title>Aomaha</title>
+<link rel="icon" href="__STATIC__/pic/logo.jpg" sizes="32x32">
+<link rel="stylesheet" href="__CSS__/basic.css">
+<link rel="stylesheet" href="__CSS__/index_must.css">
+<link rel="stylesheet" type="text/css" href="__CSS__/comment.css">
+<script type="text/javascript" src="__JS__/basic.js"></script>
+<script type="text/javascript" src="__JS__/index_must.js"></script>
+<script type="text/javascript" src="__JS__/comment.js"></script>
+<style type="text/css">
+#the_content{
+	margin-top:15px;
+	overflow:hidden;
+}
+#the_content img{
+	max-width:100%;
+  	height:auto;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!--引入top导航栏开始-->
+{include file="Public/top_nav" /}
+<!--引入top导航栏结束-->
+
+<!--首页主体部分开始-->
+<div class="container" id="show_all">
+
+<div class="col-xs-12" style="background-color:#DBDBDB;border-radius:15px;margin-bottom:50px;padding-bottom:10px;">
+	<!--文章标题-->
+	<div style="text-align:center;color:#2F4F4F;"><h2>{$art.title}</h2></div>
+
+	<!--文章附属信息展示-->
+	<div style="height:25px;border-bottom:1px #2F4F4F dashed;padding-left:25px;" class="hidden-xs">
+		<i class="glyphicon glyphicon-user"></i> {$art.author}
+		<i class="glyphicon glyphicon-th-list" style="margin-left:25px;"></i> {$cid_name}
+		<i class="glyphicon glyphicon-eye-open" style="margin-left:25px;"></i> {$art.click}
+		<i class="glyphicon glyphicon-time" style="margin-left:25px;"></i> {$art.addtime}
+		<i class="glyphicon glyphicon-search" style="margin-left:25px;"></i> 搜索关键词:{$art.keywords}
+	</div>
+
+	<!--文章内容展示-->
+	<div id="the_content">
+		{$art.content}
+	</div>
+
+	<!--引入评论模板-->
+		{include file="Public/comment_reply" /}
+	<!--引入评论模板-->
+
+</div>
+
+
+</div>
+<!--首页主体部分结束-->
+<script type="text/javascript">
+	
+	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<meta name="keywords" content="Aomaha|个人博客|技术博客|WEB渗透测试">
+<meta name="description" content="这是记录一些学习过程的个人博客">
+<meta name="author" content="Aomaha">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--引入bootstrap和jquery(用的cdn)-->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--引入bootstrap和jquery结束-->　
+<title>Aomaha_WEB开发</title>
+<link rel="icon" href="__STATIC__/pic/logo.jpg" sizes="32x32">
+<link rel="stylesheet" href="__CSS__/basic.css">
+<script type="text/javascript" src="__JS__/basic.js"></script>
+</head>
+<body>
+<!--引入top导航栏开始-->
+{include file="Public/top_nav" /}
+<!--引入top导航栏结束-->
+
+
+
+
+<!--主体部分开始-->
+<div class="container">
+
+<!--引入文章list开始-->
+{include file="Public/article_list"/}
+<!--引入文章list结束-->
+
+
+</div>
+<!--主体部分结束-->
+
+
+
+<script type="text/javascript">
+	//thought页面的list的阅读全文开始
+	$('.read_all').click(function(){
+		var aid=$(this).attr('value').split("--");
+		var url="{:url('index/Index/big_read',['aid'=>'re_aid','top_name'=>'re_top'])}";
+		var true_url=url.replace("re_aid",aid[0]);
+		var true_url=true_url.replace("re_top",aid[1]);
+		window.open(true_url);
+	});
+	//thought页面的list的阅读全文结束
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+     <!--随机文章list开始-->
+     {volist name='art' id='vo'}
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="panel panel-primary" style="border:0;">
+                  <div class="panel-heading" style="background-color:#212121;border:0">
+                      <h3 class="panel-title" ><span class="glyphicon glyphicon-book">&nbsp;</span>{$vo.title}</h3>                      
+                      <span class="label label-default" style="float: right;margin-top: -20px;line-height: 15px;">
+                        {switch name="$vo['big_cid']"}
+                            {case value='-1'}WEB开发{/case}
+                            {case value='-2'}WEB渗透{/case}
+                            {case value='-3'}其他技术{/case}
+                            {case value='-4'}碎念{/case}
+                        {/switch}
+                      </span>
+                    <div class=" hidden-xs hidden-sm">
+                      <span class="label label-default" style="float: right;margin-top: -20px;margin-right:10px;line-height: 15px;">
+                          {$vo.addtime}
+                      </span>
+                      <span class="label label-default" style="float: right;margin-top: -20px;margin-right:10px;line-height: 15px;">作者：{$vo.author}</span>
+                    </div>
+                  </div>
+                  <div class="panel-body" style="background-color:#DBDBDB;">
+                      <div class="row">
+                          <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+                                <a href="#" onclick="return false;" class="thumbnail read_all" value="{$vo.aid}--{$top_name}">
+                                    <img src="{$vo.title_pic}"
+                                         alt="标题图片" style="height:110px;">
+                                </a>
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 c-list">
+                              {:mb_substr(strip_tags($vo.content),0,300,'utf8')}
+                          </div>
+                          <span class="label label-info read_all" style="float: right;margin-top: 3px;margin-right: 20px;cursor:pointer;" value="{$vo.aid}--{$top_name}">阅读全文</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {/volist}
+      <!--随机文章list结束-->

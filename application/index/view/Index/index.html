@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<meta name="keywords" content="Aomaha|个人博客|技术博客|WEB渗透测试">
+<meta name="description" content="这是记录一些学习过程的个人博客">
+<meta name="author" content="Aomaha">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--引入bootstrap和jquery(= =')-->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--引入bootstrap和jquery结束-->　
+<title>Aomaha</title>
+<link rel="icon" href="__STATIC__/pic/logo.jpg" sizes="32x32">
+<link rel="stylesheet" href="__CSS__/basic.css">
+<link rel="stylesheet" href="__CSS__/index_must.css">
+<script type="text/javascript" src="__JS__/basic.js"></script>
+<script type="text/javascript" src="__JS__/index_must.js"></script>
+</head>
+
+<body>
+
+
+<!--引入top导航栏开始-->
+{include file="Public/top_nav" /}
+<!--引入top导航栏结束-->
+
+
+<!--首页主体部分开始-->
+<div class="container">
+
+<!--应引入首页的推文开始-->
+{include file="Index/index_spread" /}
+<!--应引入首页的推文结束-->
+
+<!--引入文章显示开始-->
+{include file="Public/article_list" /}
+{$art->render()}
+<!--引入文章显示结束-->
+</div>
+<!--首页主体部分结束-->
+{include file="Public/buttom" /}
+
+
+
+
+<script type="text/javascript">
+	//index页面的list的阅读全文开始
+	$('.read_all').click(function(){
+		var aid=$(this).attr('value').split("--");
+		var url="{:url('index/Index/big_read',['aid'=>'re_aid','top_name'=>'re_top'])}";
+		var true_url=url.replace("re_aid",aid[0]);
+		//alert(aid[1]);
+		var true_url=true_url.replace("re_top",aid[1]);
+		window.open(true_url);
+	});
+	//index页面的list的阅读全文结束
+</script>
+
+</body>
+</html>

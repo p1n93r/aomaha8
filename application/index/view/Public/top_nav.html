@@ -1,0 +1,43 @@
+<!--顶部导航栏开始-->
+<header class="navbar navbar-inverse navbar-fixed-top" id="c-header">
+<div class="container">
+    <div class="navbar-header">
+      <a  href="{:url('Index/index')}">
+        <img src="__STATIC__/pic/logo1.png" style="width:50px;">
+      </a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#c-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+    </div>
+    <div class="collapse navbar-collapse" id="c-nav">
+    <ul class="nav navbar-nav" id="c-moblie">
+        <!--添加一个滑块，用于导航栏hover的滑动效果-->
+        <div class="hidden-xs  c-mobile-nav"></div>
+        <li id="index" class="{eq name="top_name" value="index"}c-active{/eq}"><a href="{:url('Index/index')}" >首页</a></li>
+        <li class="{eq name="top_name" value="doWeb"}c-active{/eq}"><a href="{:url('Index/category',array('top_name'=>'doWeb'))}">WEB开发</a></li>
+        <li class="{eq name="top_name" value="inWeb"}c-active{/eq}"><a href="{:url('Index/category',array('top_name'=>'inWeb'))}">WEB渗透</a></li>
+        <li class="{eq name="top_name" value="other"}c-active{/eq}"><a href="{:url('Index/category',array('top_name'=>'other'))}">其他技术</a></li>
+        <li class="{eq name="top_name" value="thought"}c-active{/eq}"><a href="{:url('Index/category',array('top_name'=>'thought'))}">碎念</a></li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right" id="c-aa">
+        <li><a href="{:url('User/login')}"><span class="glyphicon glyphicon-log-in"></span> 登陆</a></li>
+    </ul>
+    <!--登陆显示用户名-->
+    <span style="list-style: none;float: right;margin-top: 15px" class="hidden-xs hidden-sm">
+        <span style="color:#00C5CD" id="c-session">{$Think.session.name}</span>
+        <a id="tuichu" href="{:url('User/out')}">&nbsp;退出</a>
+    </span>
+    <form class="navbar-form navbar-right" role="search" method="post" action="{:url('index/Index/search')}">
+          <div class="hidden-sm input-group">
+            <input class="form-control input-sm" type="text" name="search">
+            <span class="input-group-btn"><button class="btn btn-info btn-sm" >Search</button></span>
+          </div>
+    </form>
+  </div>
+</div>
+</header>
+<!--顶部导航栏结束-->

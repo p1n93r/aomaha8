@@ -39,29 +39,23 @@ www  WEB部署目录（或者子目录）
 - 后台用户名：Aomaha，密码：1234567890
 
 ## 运行截图
-![首页][p0]  
+首页：  
+![首页][p0]
 
-<center><strong>首页</strong></center>
+栏目下：  
+![栏目下][p1]
 
-![栏目下][p1]  
+后台登录页：  
+![后台登录页][p2]
 
-<center><strong>栏目下</strong></center>
+后台添加文章页面：  
+![后台添加文章页面][p3]
 
-![后台登录页][p2]  
+后台管理文章页面：  
+![后台管理文章页面][p4]
 
-<center><strong>后台登录页</strong></center>
-
-![后台添加文章页面][p3]  
-
-<center><strong>后台添加文章页面</strong></center>
-
-![后台管理文章页面][p4]  
-
-<center><strong>后台管理文章页面</strong></center>
-
-![404页面][p5]  
-
-<center><strong>404页面</strong></center>
+404页面：  
+![404页面][p5]
 
 
 

@@ -13,7 +13,7 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '127.0.0.1',
+    'hostname'        => 'cdb-e85utbv0.cd.tencentcdb.com',
     // 数据库名
     'database'        => 'blog',
     // 用户名
@@ -21,7 +21,7 @@ return [
     // 密码
     'password'        => '088454cg_CG_blog',
     // 端口
-    'hostport'        => '',
+    'hostport'        => '10121',
     // 连接dsn
     'dsn'             => '',
     // 数据库连接参数

@@ -1,0 +1,25 @@
+.c_comment{
+	width:800px;
+	height:100px;
+	border:1px #6E6E6E solid;
+	resize: none;
+	border-radius:5px;
+	margin-bottom:5px;
+}
+.comment-list{
+	width:800px;
+	margin-bottom:10px;
+	background-color:#F8F8FF;
+	border-radius:5px;
+	padding-left:8px;
+	padding-top:2px;
+	padding-bottom:5px;
+}
+.comment-son{
+	width:800px;
+	background-color:#AAAAAA;
+	border-radius:0px 5px 5px 0px;
+	padding:1px 10px 1px;
+	margin-bottom:5px;
+	border-left:2px #1C86EE solid;
+}

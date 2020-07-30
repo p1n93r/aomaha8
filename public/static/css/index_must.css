@@ -1,0 +1,17 @@
+.c-top{
+  width:20px;
+  height:20px;
+  line-height:20px;
+  border-radius:5px;
+  font-size:10px;
+  color:#000000;
+  float: left;
+  text-align: center;
+
+  border:1px solid #337AB7;
+  margin-right: 5px;
+}
+
+#c-top-left>li{
+  background-color:#FAFAFA;
+}

@@ -1,0 +1,30 @@
+body{
+  padding-top: 50px;
+  font-family: "Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.c-mobile-nav{
+            border: 0px;
+            margin: 0px;
+            background-color:#5E94A2;
+            position: absolute;            
+            top: 0px;
+            height: 51px;
+            width:58px;
+        }
+
+.c-list{
+  height:9em;
+  overflow: hidden;
+  line-height:1.5em;
+}
+.c-list img{
+  display:none;
+}
+.c-list:after{
+    content:"...";
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:0 15px 0px 0px;
+}
